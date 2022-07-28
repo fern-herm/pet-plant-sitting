@@ -93,13 +93,14 @@ const Create = ({ setShowCreated }): JSX.Element => {
   };
   const handleSubmit = () => {
     setShowCreated(true);
-    const jobPetsPlants = petPlants.filter((pet, i) => {
+    console.log(myPets.reverse());
+    console.log(feed);
+    const jobPetsPlants = myPets.reduce((acc, pet, i) => {
       if (feed[i] === true) {
-        return true;
+        acc.push(pet.id);
       }
-      return false;
-    });
-
+      return acc;
+    }, []);
     const obj = {
       location: user.location,
       employer_id: user.id,

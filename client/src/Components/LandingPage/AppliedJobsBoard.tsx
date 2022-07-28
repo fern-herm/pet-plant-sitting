@@ -52,21 +52,19 @@ const AppliedJobsBoard = ({
         </p>
         <img
           className='landing-application-status-card-image'
-          src={petPlants.map((pet) => {
-            return pet.pet_plant.image;
-          })}
+          src={petPlants[0].pet_plant.image}
           alt=''
         />
 
         <Card.Text className='landing-application-job-description'>
           Species:{' '}
           {petPlants.map((pet) => {
-            return pet.pet_plant.species;
+            return `${pet.pet_plant.species} | `;
           })}
           <p className='huh'>
             About:{' '}
             {petPlants.map((pet) => {
-              return pet.pet_plant.bio;
+              return `${pet.pet_plant.bio} | `;
             })}
           </p>
         </Card.Text>

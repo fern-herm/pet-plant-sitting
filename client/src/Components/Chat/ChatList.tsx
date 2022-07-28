@@ -55,7 +55,7 @@ const ChatList = () => {
         <Dropdown.Item onClick={(event) => dispatch(changeView(event.target.textContent))} eventKey="2">Pending Employers</Dropdown.Item>
         <Dropdown.Item onClick={(event) => dispatch(changeView(event.target.textContent))} eventKey="3">Confirmed Employers</Dropdown.Item>
         <Dropdown.Item onClick={(event) => dispatch(changeView(event.target.textContent))} eventKey="4">Applicants</Dropdown.Item>
-        <Dropdown.Item onClick={(event) => dispatch(changeView(event.target.textContent))} eventKey="5">Accepted Applicants</Dropdown.Item>
+        <Dropdown.Item onClick={(event) => dispatch(changeView(event.target.textContent))} eventKey="5">Sitters</Dropdown.Item>
       </DropdownButton>
       {view === 'All' ? (
         <div>
